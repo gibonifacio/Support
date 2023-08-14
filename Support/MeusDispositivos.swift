@@ -14,6 +14,7 @@ struct MeusDispositivos: View {
                 .bold()
                 .font(.title2)
             HStack {
+                
                 GroupBox {
                     Image(systemName: "iphone")
                         
@@ -27,23 +28,19 @@ struct MeusDispositivos: View {
                         .font(.caption)
                     
                 }
-                GroupBox {
-                    Image(systemName: "mack")
-                        
-                    Text("maria vitória")
+                GroupBox{
+                    Image(systemName: "macbook.and.iphone")
+                    Text("Mackbook Pro...")
                         .font(.headline)
                         .padding(.top, 1.0)
-                        
-                        
-                        
                     Text("Este dispositivo")
                         .font(.caption)
                     
                 }
             }
-            Spacer()
 
         }
+        .padding(.trailing, 50)
     }
 }
 

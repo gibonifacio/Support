@@ -14,10 +14,12 @@ struct SuporteView: View {
 
     var body: some View {
         NavigationView {
-            MeusDispositivos()
-        .navigationTitle("Suporte")
-        .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
-        .toolbar {
+            VStack {
+                MeusDispositivos()
+                
+                    .navigationTitle("Suporte")
+                    .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
+                    .toolbar {
                         ToolbarItem {
                             Button {
                                 isOn.toggle()
@@ -27,13 +29,19 @@ struct SuporteView: View {
                             .sheet(isPresented: $isOn) {
                                 PerfilView()
                             }
-
+                            
                             
                         }
                     }
+                FerramentasSuporte()
 
+            }
         }
-        
     }
     
+}
+struct SuporteView_Previews: PreviewProvider {
+    static var previews: some View {
+        SuporteView()
+    }
 }
