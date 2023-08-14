@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var searchText = ""
+
     var body: some View {
-        VStack {
-            Image(systemName: "person")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Ola ")
+        NavigationView {
+            MeusDispositivos()
+        .navigationTitle("Suporte")
+        .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
         }
-        .padding()
+        
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
