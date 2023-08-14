@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var searchText = ""
-
     var body: some View {
-        NavigationView {
-            MeusDispositivos()
-        .navigationTitle("Suporte")
-        .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
+        TabView {
+            SuporteView()
+                .tabItem {
+                    Label("Suporte", systemImage: "heart")
+                }
+            SuporteView()
+                .tabItem {
+                    Label("Suporte", systemImage: "heart")
+                }
+            SuporteView()
+                .tabItem {
+                    Label("Suporte", systemImage: "heart")
+                }
+            
         }
         
     }
