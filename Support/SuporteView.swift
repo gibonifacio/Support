@@ -17,14 +17,21 @@ struct SuporteView: View {
             VStack {
                 MeusDispositivos()
                     .navigationTitle("Suporte")
-                    
-                FerramentasSuporte()
+                    .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
                     .toolbar {
                         ToolbarItem {
                             Button {
                                 isOn.toggle()
                             } label: {
-                                Image(systemName: "person.circle")
+                                ZStack {
+                                    Circle()
+                                        .frame(width: 37, height: 37)
+                                        .foregroundColor(.gray)
+                                    Text("GB")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 16))
+                                        .bold()
+                                }
                             }
                             .sheet(isPresented: $isOn) {
                                 PerfilView()
@@ -33,6 +40,7 @@ struct SuporteView: View {
                             .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
                         }
                     }
+                FerramentasSuporte()
 
             }
         }
