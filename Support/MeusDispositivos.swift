@@ -8,39 +8,53 @@
 import SwiftUI
 
 struct MeusDispositivos: View {
+    @State var IphoneView: Bool = false
+
     var body: some View {
         VStack(alignment: .leading) {
             Text("Meus dispositivos")
                 .bold()
                 .font(.title2)
             HStack {
-                
-                GroupBox {
-                    Image(systemName: "iphone")
-                        
-                    Text("maria vitória")
-                        .font(.headline)
-                        .padding(.top, 1.0)
-                        
-                        
-                        
-                    Text("Este dispositivo")
-                        .font(.caption)
+                Button {
+                    IphoneView.toggle()
+                } label: {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(Color("AccentColor"))
+                            .frame(width: 160, height: 150)
+                            .cornerRadius(10)
+                        VStack {
+                            Image("iphone")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 36)
+                            
+                            Text("maria vitória")
+                                .font(.system(size: 24))
+                                .bold()
+                            
+                            
+                            Text("Este dispositivo")
+                        }
+                    }
                     
                 }
                 GroupBox{
-                    Image(systemName: "macbook.and.iphone")
-                    Text("Mackbook Pro...")
-                        .font(.headline)
-                        .padding(.top, 1.0)
+                    Image("mackbook")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 96)
+                        
+                    Text("Mackbook")
+                        .font(.system(size: 24))
+                        .bold()
                     Text("Este dispositivo")
-                        .font(.caption)
                     
                 }
             }
 
         }
-        .padding(.trailing, 50)
     }
 }
 

@@ -16,24 +16,23 @@ struct SuporteView: View {
         NavigationView {
             VStack {
                 MeusDispositivos()
-                
                     .navigationTitle("Suporte")
-                    .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
+                    
+                FerramentasSuporte()
                     .toolbar {
                         ToolbarItem {
                             Button {
                                 isOn.toggle()
                             } label: {
-                                Image(systemName: "heart")
+                                Image(systemName: "person.circle")
                             }
                             .sheet(isPresented: $isOn) {
                                 PerfilView()
                             }
                             
-                            
+                            .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
                         }
                     }
-                FerramentasSuporte()
 
             }
         }

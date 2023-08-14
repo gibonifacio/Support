@@ -12,11 +12,11 @@ struct ContentView: View {
         TabView {
             SuporteView()
                 .tabItem {
-                    Label("Suporte", systemImage: "heart")
+                    Label("Suporte", systemImage: "square.split.2x2.fill")
                 }
             SuporteView()
                 .tabItem {
-                    Label("Suporte", systemImage: "heart")
+                    Label("Suporte", systemImage: "mappin.and.ellipse")
                 }
             AtividadeView()
                 .tabItem {
