@@ -14,6 +14,7 @@
 		FAE8A7932A8AA342009707E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE8A7922A8AA342009707E0 /* Preview Assets.xcassets */; };
 		FAE8A79A2A8AA7E4009707E0 /* SuporteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8A7992A8AA7E4009707E0 /* SuporteView.swift */; };
 		FAE8A79C2A8AA874009707E0 /* PerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8A79B2A8AA874009707E0 /* PerfilView.swift */; };
+		FAE8A79E2A8AB8DB009707E0 /* AtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8A79D2A8AB8DB009707E0 /* AtividadeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		FAE8A7922A8AA342009707E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAE8A7992A8AA7E4009707E0 /* SuporteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuporteView.swift; sourceTree = "<group>"; };
 		FAE8A79B2A8AA874009707E0 /* PerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilView.swift; sourceTree = "<group>"; };
+		FAE8A79D2A8AB8DB009707E0 /* AtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtividadeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				FAE8A79B2A8AA874009707E0 /* PerfilView.swift */,
 				FAE8A78D2A8AA341009707E0 /* ContentView.swift */,
 				FAE8A7992A8AA7E4009707E0 /* SuporteView.swift */,
+				FAE8A79D2A8AB8DB009707E0 /* AtividadeView.swift */,
 				24D180E52A8AA67D0054D56B /* MeusDispositivos.swift */,
 				FAE8A78F2A8AA342009707E0 /* Assets.xcassets */,
 				FAE8A7912A8AA342009707E0 /* Preview Content */,
@@ -150,6 +153,7 @@
 				FAE8A79A2A8AA7E4009707E0 /* SuporteView.swift in Sources */,
 				FAE8A79C2A8AA874009707E0 /* PerfilView.swift in Sources */,
 				24D180E62A8AA67D0054D56B /* MeusDispositivos.swift in Sources */,
+				FAE8A79E2A8AB8DB009707E0 /* AtividadeView.swift in Sources */,
 				FAE8A78C2A8AA341009707E0 /* SupportApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,9 +18,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("Suporte", systemImage: "heart")
                 }
-            SuporteView()
+            AtividadeView()
                 .tabItem {
-                    Label("Suporte", systemImage: "heart")
+                    Label("Suporte", systemImage: "clock.fill")
                 }
             
         }

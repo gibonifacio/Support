@@ -10,17 +10,33 @@ import SwiftUI
 
 struct PerfilView: View {
     @Environment(\.dismiss) var dismiss
+    @State var pickerSelection: String = ""
+    var pickerOptions: [String] = ["Austrália", "Brasil", "Cuba", "México"]
+    
     var body: some View {
         NavigationStack {
             VStack {
                 VStack {
                     ZStack {
                         Circle()
-                            .frame(width: 30, height: 30)
+                            .frame(width: 90, height: 90)
+                            .foregroundColor(.gray)
                         Text("GB")
+                            .foregroundColor(.white)
+                            .font(.system(size: 36))
+                            .bold()
                     }
                     Text("Giovanna Bonifacio")
-                    Text("oi")
+                        .font(.title)
+                        .bold()
+                    Text("bonifaciocgiovanna@gmail.com")
+                        .foregroundColor(.gray)
+                    
+                    Picker("REGIÃO", selection: $pickerSelection) {
+                        ForEach(pickerOptions, id: \.self) { pais in
+                            Text(pais)
+                        }
+                    }.pickerStyle(.navigationLink)
                 }
             }
             .toolbar {
