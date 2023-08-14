@@ -24,7 +24,15 @@ struct SuporteView: View {
                             Button {
                                 isOn.toggle()
                             } label: {
-                                Image(systemName: "heart")
+                                ZStack {
+                                    Circle()
+                                        .frame(width: 37, height: 37)
+                                        .foregroundColor(.gray)
+                                    Text("GB")
+                                        .foregroundColor(.white)
+                                        .font(.system(size: 16))
+                                        .bold()
+                                }
                             }
                             .sheet(isPresented: $isOn) {
                                 PerfilView()

@@ -14,7 +14,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Suporte", systemImage: "heart")
                 }
-            SuporteView()
+            MapaView()
                 .tabItem {
                     Label("Suporte", systemImage: "heart")
                 }
