@@ -9,51 +9,37 @@ import SwiftUI
 
 struct MeusDispositivos: View {
     @State var IphoneView: Bool = false
-
+    let dispositivos = [ClasseDispositivos(imagem: "iphone", nome: "gi boni", descricao: "Este dispositivo"), ClasseDispositivos(imagem: "mackbook", nome: "Mackbook", descricao: "Este dispositivo")]
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Meus dispositivos")
-                .bold()
-                .font(.title2)
-            HStack {
-                Button {
-                    IphoneView.toggle()
-                } label: {
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(Color("AccentColor"))
-                            .frame(width: 160, height: 150)
-                            .cornerRadius(10)
-                        VStack {
-                            Image("iphone")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 36)
-                            
-                            Text("maria vitória")
-                                .font(.system(size: 24))
-                                .bold()
-                            
-                            
-                            Text("Este dispositivo")
+        NavigationView {
+            VStack(alignment: .leading) {
+                Text("Meus dispositivos")
+                    .bold()
+                    .font(.title2)
+                HStack {
+                    ForEach(dispositivos) { dispositivo in
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(Color("cinza"))
+                                .frame(width: 160, height: 160)
+                                .cornerRadius(10)
+                            VStack {
+                                Image(dispositivo.imagem)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: 60)
+                                
+                                Text(dispositivo.nome)
+                                    .font(.system(size: 24))
+                                    .bold()
+                                
+                                
+                                Text(dispositivo.descricao)
+                            }
                         }
                     }
-                    
-                }
-                GroupBox{
-                    Image("mackbook")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 96)
-                        
-                    Text("Mackbook")
-                        .font(.system(size: 24))
-                        .bold()
-                    Text("Este dispositivo")
-                    
                 }
             }
-
         }
     }
 }

@@ -10,6 +10,8 @@
 		24D180E62A8AA67D0054D56B /* MeusDispositivos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D180E52A8AA67D0054D56B /* MeusDispositivos.swift */; };
 		24D180E82A8AB37E0054D56B /* IphoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D180E72A8AB37E0054D56B /* IphoneView.swift */; };
 		24D180EA2A8AB94B0054D56B /* FerramentasSuporte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D180E92A8AB94B0054D56B /* FerramentasSuporte.swift */; };
+		24D180EC2A8BE5970054D56B /* ClasseDispositivos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D180EB2A8BE5970054D56B /* ClasseDispositivos.swift */; };
+		24D180EE2A8BEA3D0054D56B /* Topico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D180ED2A8BEA3D0054D56B /* Topico.swift */; };
 		FAE8A78C2A8AA341009707E0 /* SupportApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8A78B2A8AA341009707E0 /* SupportApp.swift */; };
 		FAE8A78E2A8AA341009707E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8A78D2A8AA341009707E0 /* ContentView.swift */; };
 		FAE8A7902A8AA342009707E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAE8A78F2A8AA342009707E0 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 		24D180E52A8AA67D0054D56B /* MeusDispositivos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeusDispositivos.swift; sourceTree = "<group>"; };
 		24D180E72A8AB37E0054D56B /* IphoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IphoneView.swift; sourceTree = "<group>"; };
 		24D180E92A8AB94B0054D56B /* FerramentasSuporte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FerramentasSuporte.swift; sourceTree = "<group>"; };
+		24D180EB2A8BE5970054D56B /* ClasseDispositivos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClasseDispositivos.swift; sourceTree = "<group>"; };
+		24D180ED2A8BEA3D0054D56B /* Topico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topico.swift; sourceTree = "<group>"; };
 		FAE8A7882A8AA341009707E0 /* Support.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Support.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE8A78B2A8AA341009707E0 /* SupportApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportApp.swift; sourceTree = "<group>"; };
 		FAE8A78D2A8AA341009707E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,10 +72,12 @@
 				FAE8A78B2A8AA341009707E0 /* SupportApp.swift */,
 				FAE8A78D2A8AA341009707E0 /* ContentView.swift */,
 				FAE8A7992A8AA7E4009707E0 /* SuporteView.swift */,
-				FAE8A79F2A8ABEB3009707E0 /* MapaView.swift */,
 				FAE8A79D2A8AB8DB009707E0 /* AtividadeView.swift */,
 				24D180E52A8AA67D0054D56B /* MeusDispositivos.swift */,
+				24D180EB2A8BE5970054D56B /* ClasseDispositivos.swift */,
+				24D180ED2A8BEA3D0054D56B /* Topico.swift */,
 				24D180E92A8AB94B0054D56B /* FerramentasSuporte.swift */,
+				FAE8A79F2A8ABEB3009707E0 /* MapaView.swift */,
 				24D180E72A8AB37E0054D56B /* IphoneView.swift */,
 				FAE8A79B2A8AA874009707E0 /* PerfilView.swift */,
 				FAE8A78F2A8AA342009707E0 /* Assets.xcassets */,
@@ -164,6 +170,8 @@
 				FAE8A79C2A8AA874009707E0 /* PerfilView.swift in Sources */,
 				24D180E82A8AB37E0054D56B /* IphoneView.swift in Sources */,
 				24D180E62A8AA67D0054D56B /* MeusDispositivos.swift in Sources */,
+				24D180EE2A8BEA3D0054D56B /* Topico.swift in Sources */,
+				24D180EC2A8BE5970054D56B /* ClasseDispositivos.swift in Sources */,
 				FAE8A79E2A8AB8DB009707E0 /* AtividadeView.swift in Sources */,
 				FAE8A7A02A8ABEB3009707E0 /* MapaView.swift in Sources */,
 				FAE8A78C2A8AA341009707E0 /* SupportApp.swift in Sources */,
