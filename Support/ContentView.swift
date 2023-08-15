@@ -14,7 +14,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Suporte", systemImage: "square.split.2x2.fill")
                 }
-            SuporteView()
+            MapaView()
                 .tabItem {
                     Label("Suporte", systemImage: "mappin.and.ellipse")
                 }
@@ -23,7 +23,9 @@ struct ContentView: View {
                     Label("Suporte", systemImage: "clock.fill")
                 }
             
-        }
+        }.accentColor(Color.blue)
+            .toolbarColorScheme(.light, for: .tabBar)
+
         
     }
     

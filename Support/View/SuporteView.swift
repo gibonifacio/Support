@@ -11,27 +11,37 @@ import SwiftUI
 struct SuporteView: View {
     @State private var searchText = ""
     @State var isOn = false
+    @State var isPresented = false
+    
 
     var body: some View {
         NavigationView {
             VStack {
-                MeusDispositivos()
                 Button (action: {
-                    isOn.toggle()
+                    isPresented.toggle()
                 }, label: {
                     ZStack {
                         Rectangle()
+                            .frame(width: 400, height: 40)
+                            .foregroundColor(Color("atividadeFundo"))
+                            .cornerRadius(10)
                         HStack {
                             Text("Conte o que está acontecendo")
+                            Spacer()
                             Image(systemName: "heart")
                         }
-                        
+                        .padding()
                     }
-                    .sheet(isPresented: $isOn) {
-                        
+                    .frame(width: 400)
+                    .sheet(isPresented: $isPresented) {
+                        TextSheetView()
+                            .presentationBackground(.white)
                     }
                     
                 })
+                Divider()
+                MeusDispositivos()
+                
                     .navigationTitle("Suporte")
                     
                     .toolbar {
@@ -53,10 +63,10 @@ struct SuporteView: View {
                                 PerfilView()
                             }
                             
-                            .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
+                            
                         }
                     }
-                FerramentasSuporte()
+//                FerramentasSuporte()
 
             }
         }

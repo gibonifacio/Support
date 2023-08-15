@@ -15,4 +15,5 @@ struct ClasseDispositivos: Identifiable {
     var imagem: String
     var nome: String
     var descricao: String
+    var topicos: [Topico]
 }

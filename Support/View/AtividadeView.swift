@@ -28,6 +28,13 @@ struct AtividadeView: View {
             }
             .navigationTitle("Atividade recente")
         }
-        .background(Color("atividadeFundo"))
+        .background(.blue)
+    }
+}
+
+
+struct AtividadeView_Previews: PreviewProvider {
+    static var previews: some View {
+        AtividadeView()
     }
 }

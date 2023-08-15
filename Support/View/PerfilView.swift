@@ -52,3 +52,8 @@ struct PerfilView: View {
     }
 }
 
+struct PerfilView_Previews: PreviewProvider {
+    static var previews: some View {
+        PerfilView()
+    }
+}
