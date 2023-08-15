@@ -18,6 +18,7 @@
 		FAE8A79C2A8AA874009707E0 /* PerfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8A79B2A8AA874009707E0 /* PerfilView.swift */; };
 		FAE8A79E2A8AB8DB009707E0 /* AtividadeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8A79D2A8AB8DB009707E0 /* AtividadeView.swift */; };
 		FAE8A7A02A8ABEB3009707E0 /* MapaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8A79F2A8ABEB3009707E0 /* MapaView.swift */; };
+		FAE8A7A22A8BE5A6009707E0 /* TextSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE8A7A12A8BE5A6009707E0 /* TextSheetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		FAE8A79B2A8AA874009707E0 /* PerfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilView.swift; sourceTree = "<group>"; };
 		FAE8A79D2A8AB8DB009707E0 /* AtividadeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtividadeView.swift; sourceTree = "<group>"; };
 		FAE8A79F2A8ABEB3009707E0 /* MapaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaView.swift; sourceTree = "<group>"; };
+		FAE8A7A12A8BE5A6009707E0 /* TextSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextSheetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				24D180E52A8AA67D0054D56B /* MeusDispositivos.swift */,
 				24D180E92A8AB94B0054D56B /* FerramentasSuporte.swift */,
 				24D180E72A8AB37E0054D56B /* IphoneView.swift */,
+				FAE8A7A12A8BE5A6009707E0 /* TextSheetView.swift */,
 				FAE8A79B2A8AA874009707E0 /* PerfilView.swift */,
 				FAE8A78F2A8AA342009707E0 /* Assets.xcassets */,
 				FAE8A7912A8AA342009707E0 /* Preview Content */,
@@ -161,6 +164,7 @@
 				FAE8A78E2A8AA341009707E0 /* ContentView.swift in Sources */,
 				FAE8A79A2A8AA7E4009707E0 /* SuporteView.swift in Sources */,
 				24D180EA2A8AB94B0054D56B /* FerramentasSuporte.swift in Sources */,
+				FAE8A7A22A8BE5A6009707E0 /* TextSheetView.swift in Sources */,
 				FAE8A79C2A8AA874009707E0 /* PerfilView.swift in Sources */,
 				24D180E82A8AB37E0054D56B /* IphoneView.swift in Sources */,
 				24D180E62A8AA67D0054D56B /* MeusDispositivos.swift in Sources */,

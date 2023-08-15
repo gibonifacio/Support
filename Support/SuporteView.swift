@@ -16,9 +16,24 @@ struct SuporteView: View {
         NavigationView {
             VStack {
                 MeusDispositivos()
-                
+                Button (action: {
+                    isOn.toggle()
+                }, label: {
+                    ZStack {
+                        Rectangle()
+                        HStack {
+                            Text("Conte o que está acontecendo")
+                            Image(systemName: "heart")
+                        }
+                        
+                    }
+                    .sheet(isPresented: $isOn) {
+                        
+                    }
+                    
+                })
                     .navigationTitle("Suporte")
-                    .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
+                    
                     .toolbar {
                         ToolbarItem {
                             Button {
