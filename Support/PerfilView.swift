@@ -16,22 +16,26 @@ struct PerfilView: View {
     
     var body: some View {
         NavigationStack {
+            Spacer(minLength: 96)
             VStack {
-                VStack {
-                    ZStack {
-                        Circle()
-                            .frame(width: 90, height: 90)
-                            .foregroundColor(.gray)
-                        Text("GB")
-                            .foregroundColor(.white)
-                            .font(.system(size: 36))
-                            .bold()
-                    }
-                    Text("Giovanna Bonifacio")
-                        .font(.title)
-                        .bold()
-                    Text("bonifaciocgiovanna@gmail.com")
+                ZStack {
+                    Circle()
+                        .frame(width: 90, height: 90)
                         .foregroundColor(.gray)
+                    Text("GB")
+                        .foregroundColor(.white)
+                        .font(.system(size: 36))
+                        .bold()
+                }
+                Text("Giovanna Bonifacio")
+                    .font(.title)
+                    .bold()
+                
+                Text("bonifaciocgiovanna@gmail.com")
+                    .foregroundColor(.gray)
+                    .tint(Color.gray)
+            }.padding(.bottom)
+            VStack {
                     Form {
                         Section(header: Text("Região"), footer: Text("Atualize seu país ou região para ver as opções de serviço disponíveis em sua área.")) {
                             Picker("REGIÃO", selection: $pickerSelection) {
@@ -54,18 +58,19 @@ struct PerfilView: View {
                     }
                     
                 }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Text("OK")
-                    }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button {
+                    dismiss()
+                } label: {
+                    Text("OK")
                 }
             }
         }
-    }
+            }
+         
+        }
+    
     
     
     struct PerfilView_Previews: PreviewProvider {
