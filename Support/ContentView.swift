@@ -22,14 +22,18 @@ struct ContentView: View {
                 .tabItem {
                     Label("Suporte", systemImage: "clock.fill")
                 }
+
             
         }.accentColor(Color.blue)
             .toolbarColorScheme(.light, for: .tabBar)
 
+
+        }
+
         
     }
     
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
