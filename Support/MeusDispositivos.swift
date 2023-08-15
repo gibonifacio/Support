@@ -8,39 +8,39 @@
 import SwiftUI
 
 struct MeusDispositivos: View {
+    @State var IphoneView: Bool = false
+    let dispositivos = [ClasseDispositivos(imagem: "iphone", nome: "gi boni", descricao: "Este dispositivo"), ClasseDispositivos(imagem: "mackbook", nome: "Mackbook", descricao: "Este dispositivo")]
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Meus dispositivos")
-                .bold()
-                .font(.title2)
-            HStack {
-                
-                GroupBox {
-                    Image(systemName: "iphone")
-                        
-                    Text("maria vitória")
-                        .font(.headline)
-                        .padding(.top, 1.0)
-                        
-                        
-                        
-                    Text("Este dispositivo")
-                        .font(.caption)
-                    
-                }
-                GroupBox{
-                    Image(systemName: "macbook.and.iphone")
-                    Text("Mackbook Pro...")
-                        .font(.headline)
-                        .padding(.top, 1.0)
-                    Text("Este dispositivo")
-                        .font(.caption)
-                    
+        NavigationView {
+            VStack(alignment: .leading) {
+                Text("Meus dispositivos")
+                    .bold()
+                    .font(.title2)
+                HStack {
+                    ForEach(dispositivos) { dispositivo in
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(Color("cinza"))
+                                .frame(width: 160, height: 160)
+                                .cornerRadius(10)
+                            VStack {
+                                Image(dispositivo.imagem)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(height: 60)
+                                
+                                Text(dispositivo.nome)
+                                    .font(.system(size: 24))
+                                    .bold()
+                                
+                                
+                                Text(dispositivo.descricao)
+                            }
+                        }
+                    }
                 }
             }
-
         }
-        .padding(.trailing, 50)
     }
 }
 

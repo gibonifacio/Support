@@ -53,7 +53,7 @@ struct SuporteView: View {
                                 PerfilView()
                             }
                             
-                            
+                            .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
                         }
                     }
                 FerramentasSuporte()

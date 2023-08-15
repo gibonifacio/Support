@@ -40,13 +40,31 @@ struct FerramentasSuporte: View {
                             Image(systemName: "apple.logo")
                             Text("Verificar a cobertura")
                         }}}
+                MeusServicos()
             }
+            .padding(.trailing, 96)
+            
         }
-
+        
     }
     
 }
 
+struct MeusServicos: View {
+    var body: some View {
+        Text("Meus serviços")
+            .font(.title2)
+            .bold()
+        GroupBox {
+            Image(systemName: "cloud")
+                .font(.system(size: 30))
+            Text("iCloud")
+                .font(.headline)
+            Text("0 de 5GB usados")
+                .font(.caption)
+        }
+    }
+}
 struct FerramentasSuporte_Previews: PreviewProvider {
     static var previews: some View {
         FerramentasSuporte()

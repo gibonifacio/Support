@@ -9,15 +9,17 @@ import SwiftUI
 
 struct IphoneView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "iphone")
-            Text("maria vitória")
-            Text("Este iPhone 13 \n Garantia Limitada")
-                .font(.caption2)
-            Topicos()
+        NavigationView {
+            VStack {
+                Image(systemName: "iphone")
+                Text("maria vitória").font(.title2)
+                Text("Este iPhone 13 \n Garantia Limitada")
+                    .font(.callout)
+                    .multilineTextAlignment(.center)
+                Topicos()
                 
             }
-            
+        }
         }
     }
 
@@ -37,6 +39,7 @@ struct Topicos: View {
                 }
             
         }
+        .padding()
     }
     
     struct IphoneView_Previews: PreviewProvider {
