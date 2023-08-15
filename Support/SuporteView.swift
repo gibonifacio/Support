@@ -43,7 +43,6 @@ struct SuporteView: View {
                 MeusDispositivos()
                 
                     .navigationTitle("Suporte")
-
                     .toolbar {
                         ToolbarItem {
                             Button {
