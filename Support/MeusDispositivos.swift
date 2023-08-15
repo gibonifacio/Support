@@ -20,7 +20,7 @@ struct MeusDispositivos: View {
                     .font(.title2)
                 HStack {
                     ForEach(dispositivos) { dispositivo in
-                        Button {
+                        NavigationLink {
                             FerramentasSuporte()
                         } label: {
                             ZStack {
