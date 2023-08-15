@@ -17,7 +17,6 @@ struct SuporteView: View {
             VStack {
                 MeusDispositivos()
                     .navigationTitle("Suporte")
-                    .searchable(text: $searchText, prompt: "Conte o que está acontecendo")
                     .toolbar {
                         ToolbarItem {
                             Button {
