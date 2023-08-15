@@ -22,7 +22,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Suporte", systemImage: "clock.fill")
                 }
-            
+            Rectangle()
         }
         
     }
