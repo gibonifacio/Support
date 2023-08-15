@@ -12,6 +12,7 @@ struct PerfilView: View {
     @Environment(\.dismiss) var dismiss
     @State var pickerSelection: String = ""
     var pickerOptions: [String] = ["Austrália", "Brasil", "Cuba", "México"]
+    var telOptions: [String] = ["(11) 99999-9999", "(11) 97547-7394"]
     
     var body: some View {
         NavigationStack {
@@ -31,12 +32,27 @@ struct PerfilView: View {
                         .bold()
                     Text("bonifaciocgiovanna@gmail.com")
                         .foregroundColor(.gray)
-                    
-                    Picker("REGIÃO", selection: $pickerSelection) {
-                        ForEach(pickerOptions, id: \.self) { pais in
-                            Text(pais)
+                    Form {
+                        Section(header: Text("Região"), footer: Text("Atualize seu país ou região para ver as opções de serviço disponíveis em sua área.")) {
+                            Picker("REGIÃO", selection: $pickerSelection) {
+                                ForEach(pickerOptions, id: \.self) { pais in
+                                    Text(pais)
+                                }
+                            }.pickerStyle(.navigationLink)
+                            
                         }
-                    }.pickerStyle(.navigationLink)
+                        Section(footer: Text("O Suporte da Apple usará este número para entrar em contato com você.")) {
+                            Picker("Telefone", selection: $pickerSelection) {
+                                ForEach(telOptions, id: \.self) { pais in
+                                    Text(pais)
+                                }
+                            }.pickerStyle(.navigationLink)
+                        }
+                        
+                            
+                        }
+                    }
+                    
                 }
             }
             .toolbar {
@@ -44,11 +60,16 @@ struct PerfilView: View {
                     Button {
                         dismiss()
                     } label: {
-                         Text("OK")
+                        Text("OK")
                     }
                 }
             }
         }
     }
-}
+    
+    
+    struct PerfilView_Previews: PreviewProvider {
+        static var previews: some View {
+            PerfilView()
+        }}
 
