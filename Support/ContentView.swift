@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    var dispositivos: [Dispositivo]
     var body: some View {
         TabView {
-            SuporteView()
+            SuporteView(dispositivos: dispositivos)
                 .tabItem {
                     Label("Suporte", systemImage: "square.split.2x2.fill")
                 }
@@ -35,8 +36,8 @@ struct ContentView: View {
     
 
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

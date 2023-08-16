@@ -7,10 +7,9 @@
 
 import Foundation
 import SwiftUI
-import PhotosUI
-import UIKit
 
-struct ClasseDispositivos: Identifiable {
+
+struct Dispositivo: Identifiable {
     var id = UUID()
     var imagem: String
     var nome: String
