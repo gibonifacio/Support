@@ -19,11 +19,17 @@ struct FerramentasSuporte: View {
             } label: {
                 HStack {
                     Image(systemName: "calendar.badge.plus")
+                        .foregroundStyle(.green, .red)
+                        .font(.system(size: 25))
+                        .padding(.leading, 15)
+                        .frame(width: 50)
                     Text("Gerenciar assinaturas")
+                        .tint(.black)
+                        .bold()
                     Spacer()
                 }
-                .frame(width:350, height: 50)
-                .background(Color.gray)
+                .frame(width:360, height: 60)
+                .background(Color("cinza"))
                 
                 .cornerRadius(10)
             }
@@ -32,14 +38,22 @@ struct FerramentasSuporte: View {
                 print("oi")
             } label: {
                     HStack {
+                        
                         Image(systemName: "rectangle.and.pencil.and.ellipsis")
+                            .foregroundStyle(.blue, .gray)
+                            .font(.system(size: 25))
+                            .padding(.leading, 15)
+                            .frame(width: 50)
                         Text("Redefinir a senha")
+                            .tint(.black)
+                            .bold()
                         Spacer()
                     }
-                    .frame(width:350, height: 50)
-                    .background(Color.gray)
+                    .frame(width:360, height: 60)
+                    .background(Color("cinza"))
                     
                     .cornerRadius(10)
+                    
                 }
             }
             Button {
@@ -47,11 +61,17 @@ struct FerramentasSuporte: View {
             } label: {
                 HStack {
                     Image(systemName: "apple.logo")
+                        .tint(.red)
+                        .font(.system(size: 25))
+                        .padding(.leading, 15)
+                        .frame(width: 50)
                     Text("Verificar a cobertura")
+                        .tint(.black)
+                        .bold()
                     Spacer()
                 }
-                .frame(width:350, height: 50)
-                .background(Color.gray)
+                .frame(width:360, height: 60)
+                .background(Color("cinza"))
                 
                 .cornerRadius(10)
             }

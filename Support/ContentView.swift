@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var dispositivos: [Dispositivo]
+    var servicos: [Servico]
     var body: some View {
         TabView {
-            SuporteView(dispositivos: dispositivos)
+            SuporteView(dispositivos: dispositivos, servicos: servicos)
                 .tabItem {
                     Label("Suporte", systemImage: "square.split.2x2.fill")
                 }

@@ -16,42 +16,47 @@ struct SuporteView: View {
     @State var sheetDispositivo = false
     var dispositivos: [Dispositivo]
     
+    
+    @EnvironmentObject var servicoFetcher: ServicoFetcher
+    var servicos: [Servico]
+    
     var body: some View {
         NavigationView {
-            VStack (alignment: .leading) {
-                Button (action: {
-                    isPresented.toggle()
-                }, label: {
-                    ZStack {
-                        Rectangle()
-                            .frame(width: 400, height: 40)
-                            .foregroundColor(Color("atividadeFundo"))
-                            .cornerRadius(10)
-                        HStack {
-                            Text("Conte o que está acontecendo")
-                                .tint(.gray)
-                            Spacer()
-                            Image(systemName: "heart")
+            ScrollView {
+                VStack (alignment: .leading) {
+                    Button (action: {
+                        isPresented.toggle()
+                    }, label: {
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 400, height: 40)
+                                .foregroundColor(Color("atividadeFundo"))
+                                .cornerRadius(10)
+                            HStack {
+                                Text("Conte o que está acontecendo")
+                                    .tint(.gray)
+                                Spacer()
+                                Image(systemName: "heart")
+                            }
+                            .padding()
                         }
-                        .padding()
-                    }
-//                    .frame(width:25)
-                    .sheet(isPresented: $isPresented) {
-                        TextSheetView()
-                            .presentationBackground(.white)
-                    }
+                        //                    .frame(width:25)
+                        .sheet(isPresented: $isPresented) {
+                            TextSheetView()
+                                .presentationBackground(.white)
+                        }
+                        
+                    })
+                    Divider()
+                    DispositivoSheetView(dispositivos: dispositivos)
                     
-                })
-                Divider()
-                DispositivoSheetView(dispositivos: dispositivos)
-
-                .padding(.leading, 20)
-                ScrollView(.horizontal) {
-                    if let dispositivos = dispostivoFetcher.dispositivos {
-                        
+                        .padding(.leading, 20)
+                    ScrollView(.horizontal) {
+                        if let dispositivos = dispostivoFetcher.dispositivos {
+                            
                             DispositivoView(dispositivos: dispositivos)
-                            .padding(.leading, 20)
-                        
+                                .padding(.leading, 20)
+                            
                                 .navigationTitle("Suporte")
                                 .toolbar {
                                     ToolbarItem {
@@ -72,30 +77,40 @@ struct SuporteView: View {
                                             PerfilView()
                                                 .presentationBackground(.white)
                                         }
-
+                                        
                                         
                                         
                                     }
-                            }
-                        
-
+                                }
+                            
+                            
+                        }
                     }
-                }
-                Divider()
-                FerramentasSuporte()
-                    .padding(.leading, 20)
-                
-                
-                Spacer()
-                
-                
+                    Divider()
+                    FerramentasSuporte()
+                        .padding(.leading, 20)
+                    Divider()
+                    ServicoSheetView(servicos: servicos)
                     
-//                FerramentasSuporte()
-
+                        .padding(.leading, 20)
+                    ScrollView(.horizontal) {
+                        if let servicos = servicoFetcher.servicos {
+                            
+                            ServicoView(servicos: servicos)
+                                .padding(.leading, 20)
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    
+                    
+                    //                FerramentasSuporte()
+                    
+                }
             }
         }
     }
-    
 }
     
     

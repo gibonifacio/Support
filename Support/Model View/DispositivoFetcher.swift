@@ -31,6 +31,6 @@ class DispositivoFetcher: ObservableObject {
                                       Topico(nome: "Compras na Apple Store", imagem: "oi"),
                                        Topico(nome: "Mais", imagem: "oi")]
         
-        self.dispositivos = [Dispositivo(imagem: "iphone", nome: "Iphone gi bonifacio", descricao: "Este Iphone 13", topicos: topicosDispositivoIphone), Dispositivo(imagem: "mackbook", nome: "MacBook Pro (66)", descricao: "MacBook Pro 14" , topicos: topicosDispositivoMac)]
+        self.dispositivos = [Dispositivo(imagem: "iphone", nome: "iPhone gi bonifacio", descricao: "Este iPhone 13", topicos: topicosDispositivoIphone), Dispositivo(imagem: "mackbook", nome: "MacBook Pro (66)", descricao: "MacBook Pro 14" , topicos: topicosDispositivoMac)]
     }
 }

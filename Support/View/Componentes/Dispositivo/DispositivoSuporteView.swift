@@ -67,27 +67,3 @@ struct DispositivoSuporteView: View {
     }
 
 
-//struct Topicos: View {
-//    var body: some View {
-//        VStack(alignment: .leading) {
-//            Text("Tópicos de suporte")
-//                .font(.title2)
-//                List {
-//                    Text("Reparo e danos físicos")
-//                    Text("Desempenho do dispositivo")
-//                    Text("Assinatura e compras")
-//                    Text("Compras da Apple Store")
-//                    Text("Senhas e segurança")
-//                    Text("Atualização, backup e restauração")
-//                }
-//
-//        }
-//        .padding()
-//    }
-//
-////    struct IphoneView_Previews: PreviewProvider {
-////        static var previews: some View {
-////            IphoneView()
-////        }
-////    }
-////}
