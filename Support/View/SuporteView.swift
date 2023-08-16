@@ -59,6 +59,7 @@ struct SuporteView: View {
                             
                             DispositivoView(dispositivos: dispositivos)
                                 .padding(.leading, 20)
+                                .padding(.bottom, 10)
                             
                                 .navigationTitle("Suporte")
                                 .toolbar {
@@ -92,6 +93,7 @@ struct SuporteView: View {
                     Divider()
                     FerramentasSuporte()
                         .padding(.leading, 20)
+//                        .padding(.bottom, 10)
                     Divider()
                     ServicoSheetView(servicos: servicos)
                     

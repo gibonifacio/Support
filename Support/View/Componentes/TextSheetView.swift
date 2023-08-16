@@ -21,7 +21,10 @@ struct TextSheetView: View {
                     .font(.system(size: 16))
                     .tint(.black)
                 TextField("Exemplo: senha esquecida", text: $textField)
+                    .padding()
                     .background(.white)
+                    .frame(width: .infinity)
+                    .cornerRadius(10)
                     
                     
                 Spacer()
