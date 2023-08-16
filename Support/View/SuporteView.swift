@@ -29,15 +29,18 @@ struct SuporteView: View {
                     }, label: {
                         ZStack {
                             Rectangle()
-                                .frame(width: 400, height: 40)
+                                .frame(height: 40)
                                 .foregroundColor(Color("atividadeFundo"))
                                 .cornerRadius(10)
+                                .padding(.horizontal)
                             HStack {
                                 Text("Conte o que está acontecendo")
                                     .tint(.gray)
                                 Spacer()
-                                Image(systemName: "heart")
+                                Image(systemName: "mic.fill")
+                                    .foregroundColor(.secondary)
                             }
+                            .padding(.horizontal)
                             .padding()
                         }
                         //                    .frame(width:25)
