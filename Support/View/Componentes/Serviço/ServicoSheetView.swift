@@ -23,25 +23,44 @@ struct ServicoSheetView: View {
                     .font(.title2)
                     .tint(.black)
                 Image(systemName: "greaterthan")
-                    .tint(.black)
+                    .resizable()
+                    .tint(.gray)
+                    .frame(width: 10, height:15)
+                    .bold()
             }
         }.sheet(isPresented: $sheetServico) {
             NavigationStack {
-                VStack {
-                    List(servicos) { servico in
+                VStack (alignment: .leading){
+                    ForEach(servicos) { servico in
                         HStack {
                             Image(servico.imagem)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 50, height: 50)
+                                .padding(.leading, 20)
                             VStack (alignment: .leading){
                                 Text(servico.nome)
                                 Text(servico.descricao)
                             }
+                            
                         }
-                        
+                        Divider()
                     }
-                    .listStyle(GroupedListStyle())
+                        Spacer()
+//                    List(servicos) { servico in
+//                        HStack {
+//                            Image(servico.imagem)
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 50, height: 50)
+//                            VStack (alignment: .leading){
+//                                Text(servico.nome)
+//                                Text(servico.descricao)
+//                            }
+//                        }
+//
+//                    }
+//                    .listStyle(GroupedListStyle())
                 }
                 .navigationTitle("Meus serviços")
             }

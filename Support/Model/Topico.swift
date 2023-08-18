@@ -12,4 +12,5 @@ struct Topico: Identifiable {
     var id = UUID()
     var nome: String
     var imagem: String
+    
 }

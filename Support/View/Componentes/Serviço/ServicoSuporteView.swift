@@ -14,7 +14,7 @@ struct ServicoSuporteView: View {
     @State var isPresented = false
     
     var body: some View {
-        NavigationStack {
+//        NavigationStack {
             VStack {
                 Image(servico.imagem)
                     .resizable()
@@ -34,7 +34,7 @@ struct ServicoSuporteView: View {
                     
                 }
             }
-        }
+//        }
     }
     
 }

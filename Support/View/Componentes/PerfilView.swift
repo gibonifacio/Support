@@ -16,7 +16,7 @@ struct PerfilView: View {
     
     var body: some View {
         NavigationStack {
-            Spacer(minLength: 96)
+//            Spacer(minLength: 96)
             VStack {
                 ZStack {
                     Circle()
@@ -30,32 +30,44 @@ struct PerfilView: View {
                 Text("Giovanna Bonifacio")
                     .font(.title)
                     .bold()
-                
+
                 Text("bonifaciocgiovanna@gmail.com")
                     .foregroundColor(.gray)
                     .tint(Color.gray)
-            }.padding(.bottom)
-            VStack {
-                    Form {
-                        Section(header: Text("Região"), footer: Text("Atualize seu país ou região para ver as opções de serviço disponíveis em sua área.")) {
-                            Picker("REGIÃO", selection: $pickerSelection) {
-                                ForEach(pickerOptions, id: \.self) { pais in
-                                    Text(pais)
-                                }
-                            }.pickerStyle(.navigationLink)
-                            
-                        }
-                        Section(footer: Text("O Suporte da Apple usará este número para entrar em contato com você.")) {
-                            Picker("Telefone", selection: $pickerSelection) {
-                                ForEach(telOptions, id: \.self) { pais in
-                                    Text(pais)
-                                }
-                            }.pickerStyle(.navigationLink)
-                        }
+                
+                Form {
+                    
+                    Text("Giovanna Bonifacio")
+                        .font(.title)
+                        .bold()
+                    
+                    Text("bonifaciocgiovanna@gmail.com")
+                        .foregroundColor(.gray)
+                        .tint(Color.gray)
+                    
+                    Section(header: Text("Região"), footer: Text("Atualize seu país ou região para ver as opções de serviço disponíveis em sua área.")) {
+                        Picker("REGIÃO", selection: $pickerSelection) {
+                            ForEach(pickerOptions, id: \.self) { pais in
+                                Text(pais)
+                            }
+                        }.pickerStyle(.navigationLink)
                         
-                            
-                        }
                     }
+                    Section(footer: Text("O Suporte da Apple usará este número para entrar em contato com você.")) {
+                        Picker("Telefone", selection: $pickerSelection) {
+                            ForEach(telOptions, id: \.self) { pais in
+                                Text(pais)
+                            }
+                        }.pickerStyle(.navigationLink)
+                    }
+                    
+                    
+                    
+                }
+            }.padding(.bottom)
+            
+
+                    
                     
                 }
         .toolbar {

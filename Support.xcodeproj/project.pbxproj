@@ -101,8 +101,8 @@
 		FA5CD4B32A8D6859006248EE /* Dispositivo */ = {
 			isa = PBXGroup;
 			children = (
-				24D180E72A8AB37E0054D56B /* DispositivoSuporteView.swift */,
 				24D180E52A8AA67D0054D56B /* DispositivoView.swift */,
+				24D180E72A8AB37E0054D56B /* DispositivoSuporteView.swift */,
 				FA5CD4B92A8D68D6006248EE /* DispositivoSheetView.swift */,
 			);
 			path = Dispositivo;
@@ -112,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				FA5CD4AD2A8D5805006248EE /* ServicoView.swift */,
-				FA5CD4B52A8D688D006248EE /* ServicoSheetView.swift */,
 				FA5CD4B72A8D68AF006248EE /* ServicoSuporteView.swift */,
+				FA5CD4B52A8D688D006248EE /* ServicoSheetView.swift */,
 			);
 			name = "Serviço";
 			path = "Serviço";

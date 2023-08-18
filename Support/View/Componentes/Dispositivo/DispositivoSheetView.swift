@@ -23,25 +23,32 @@ struct DispositivoSheetView: View {
                     .font(.title2)
                     .tint(.black)
                 Image(systemName: "greaterthan")
-                    .tint(.black)
+                    .resizable()
+                    .tint(.gray)
+                    .frame(width: 10, height:15)
+                    .bold()
             }
 //            .padding(.trailing, 150)
         }.sheet(isPresented: $sheetDispositivo) {
             NavigationStack {
-                VStack {
-                    List(dispositivos) { dispositivo in
+                VStack (alignment: .leading){
+                    ForEach(dispositivos) { dispositivo in
                         HStack {
                             Image(dispositivo.imagem)
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 50, height: 50)
+                                .padding(.leading, 20)
                             VStack (alignment: .leading){
                                 Text(dispositivo.nome)
                                 Text(dispositivo.descricao)
                             }
+                            
                         }
+                        Divider()
                     }
-                    .listStyle(GroupedListStyle())
+                    Spacer()
+
                     
                 }.navigationTitle("Meus dispositivos")
             }
